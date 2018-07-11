@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Welcome {{ fname+' '+lname }}!!
+{% endblock %}
+
+{% block body %}
+  <h4 h4 class="display-4"> You are successfully registered !! </h4>
+  <h4 class="display-4">  Your Name is : {{ fname+' '+lname }} </h4> <br>
+  <h4 class="display-4">  Your Age is : {{ age }} </h4> <br>
+
+<form>
+  <input type="button" value="Go Back" onclick="window.location.href='{{ url_for('index') }}'" class="btn btn-primary">
+</form><br>
+
+<h4 class="display-4">Users Registred : </h4><br>
+
+<ol class="list-group">
+  {% for x in users: %}
+    <li class="list-group-item">  {{ x.fname+' '+x.lname, x.age }} </li>
+  {% endfor %}
+</ol>
+
+{% endblock %}

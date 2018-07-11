@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Homepage !!
+{% endblock %}
+
+{% block body %}
+    <h3 class="display-3" align="center"> Welcome to the Page !! <h3>
+
+    <p> For user Registration click here : <p>
+    <form>
+      <input type="button" value="Registration" onclick="window.location.href='{{ url_for('register') }}'" class="btn btn-primary">
+    </form><br>
+
+{% endblock %}

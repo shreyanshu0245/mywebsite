@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    User Registration !!
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('hello') }}" method="post">
+        <input type="text" name="fname" class="form-control" placeholder="Enter the First Name" style="width:300px;">
+        <input type="text" name="lname" class="form-control" placeholder="Enter the Last Name" style="width:300px;"><br>
+        <input type="text" name="username" class="form-control" placeholder="Enter the Username" style="width:300px;">
+        <input type="password" name="password" class="form-control" placeholder="Enter the Password" style="width:300px;"><br>
+        <input type="email" name="email" class="form-control" placeholder="Enter the Email address" style="width:300px;">
+        <input type="number" name="mobile" class="form-control" placeholder="Enter the Mobile Number" style="width:300px;"><br>
+        <input type="number" name="age" class="form-control" placeholder="Enter the Age" style="width:300px;">
+        <input type="text" name="location" class="form-control" placeholder="Enter the Location" style="width:300px;"><br>
+        <button  class="btn btn-primary">Submit</button>
+    </form> <br>
+
+    {% if message: %}
+      <div class="alert alert-primary" role="alert">
+        Please Input something !
+      </div>
+    {% else %}
+
+    {% endif %}
+
+  {% endblock %}
